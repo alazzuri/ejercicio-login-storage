@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario JS</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Iniciar Sesion</h1>
+      <form>
+        <div class="input-container">
+          <label for="email">Email</label>
+          <input
+            name="email"
+            type="email"
+            id="email-input"
+            placeholder="Ingresa tu email"
+          />
+        </div>
+        <div class="input-container">
+          <label for="password">Contraseña</label>
+          <input
+            name="password"
+            type="password"
+            id="password-input"
+            placeholder="Ingresa tu contraseña"
+          />
+        </div>
+        <div id="status-container">
+          <div id="loader" class="hidden">Iniciando Sesion...</div>
+          <div id="error-container" class="hidden"></div>
+        </div>
+        <button class="login-btn" type="button">Inciar sesion</button>
+      </form>
+    </main>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
