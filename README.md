@@ -2,7 +2,7 @@
 
 En el presente ejercicio, continuaremos trabajando sobre el formulario de login que vimos anteriormente.
 
-La consigna del ejercicio, consiste en mantener iniciada la sesión del usuario, almacenando para ello la infomación de la persona en el LocalStorage una vez que la misma se encuentre logueada; en base a dicha información, podremos luego validar si la sesión ha sido iniciada o no, y sobre dicha base decidir que elementos mostrarle a la persona cuando se cargue la página.
+La consigna del ejercicio, consiste en mantener iniciada la sesión del usuario, almacenando para ello la infomación de la persona en el localStorage una vez que la misma se encuentre logueada; en base a dicha información, podremos luego validar si la sesión ha sido iniciada o no, y sobre dicha base decidir que elementos mostrarle a la persona cuando se cargue la página.
 
 Por otra parte, deberemos dar a la persona la posibilidad de cerrar la sesión, en cuyo caso habrá que realizar los pasos necesarios para limpiar la información almacenada, y redirigirlo nuevamente al formulario de login.
 
@@ -10,7 +10,7 @@ Para resolver esta actividad, deberás examinar y prestar atención a los distin
 
 ## Ejemplo:
 
-Puedes ver el comportamiento del formulario en la siguiente imagen:
+Puedes ver el comportamiento de la aplicación en la siguiente imagen:
 
 <img src="./assets/form.gif">
 
