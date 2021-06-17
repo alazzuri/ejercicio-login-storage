@@ -1,17 +1,12 @@
-# Ejercicio de Practica. ✏️
+# Ejercicio de Práctica. ✏️
 
-En el presente ejercicio, partiremos de un formulario de login previamente implementado, en donde la persona debera ingresar su email y contrasena.
+En el presente ejercicio, continuaremos trabajando sobre el formulario de login que vimos anteriormente.
 
-La consigna del ejercicio, consiste en simular una validacion asincronica, que se haria comparando la informacion ingresada por la persona, contra los datos que se encuentran almacenados en el servidor.
+La consigna del ejercicio, consiste en mantener iniciada la sesión del usuario, almacenando para ello la infomación de la persona en el LocalStorage una vez que la misma se encuentre logueada; en base a dicha información, podremos luego validar si la sesión ha sido iniciada o no, y sobre dicha base decidir que elementos mostrarle a la persona cuando se cargue la página.
 
-Para ello, simularemos un tiempo de respuesta (hasta que se resuelva la peticion al servidor), de tres segundos. Durante dicho lapso, deberemos indicar al usuario que
-la aplicacion se encuentre "Iniciando Sesion..."
+Por otra parte, deberemos dar a la persona la posibilidad de cerrar la sesión, en cuyo caso habrá que realizar los pasos necesarios para limpiar la información almacenada, y redirigirlo nuevamente al formulario de login.
 
-Asimismo, a partir de los datos ingresados, validaremos si los mismos coinciden con la informacion del usuario almacenada en la base de datos. En caso de que los mismos no coincidan, deberemos mostrar un mensaje de error.
-
-Si los datos ingresados son correctos, se debera mostrar un mensaje de bienvenida al usuario.
-
-Para resolver esta actividad, deberas examinar y prestar atencion a los distintos tags html y sus distintas propiedades, para ver de que manera puedes seleccionar cada elemento mediante javascript. 👀 👀 👀
+Para resolver esta actividad, deberás examinar y prestar atención a los distintos tags html y sus distintas propiedades, para ver de que manera puedes seleccionar y manipular cada elemento mediante javascript. De la misma manera, en el archivo styles.css, te dejamos algunos estilos que podrán serte de utilidad para realizar la tarea asignada. 👀 👀 👀
 
 ## Ejemplo:
 

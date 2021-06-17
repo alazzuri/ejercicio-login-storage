@@ -32,59 +32,34 @@ const baseDeDatos = {
 
 // Paso a paso:
 
-// 1) Escuchar el evento necesario para reaccionar cuando el usuario
-// haga click en el boton iniciar sesion.
+// 1) Al momento de que la persona inicia sesión, si las validaciones que ya tenemos implementadas
+// han sido exitosas, deberemos almacenar la información del usuario en el LocalStorage.
 
-// 2) El proceso de inicio de sesion debera tener una demora de 3 segundos.
-// Deberas agregar la funcion correspondiente para simular dicha demora.
+// 2) Al mensaje de bienvenida que ya teníamos implementado, deberemos agregarle el nombre de la
+// persona y un botón de "Cerrar Sesión".
 
-// 3) Durante el tiempo indicado anteriormente, se debera mostrar el mensaje "Iniciando sesion..."
+// 3) Una vez iniciada la sesión, la misma se deberá mantener en ese estado para el caso de que la persona
+// recargue la página. Para ello, deberás validar si existe información del usuario al momento en
+// que se produce la carga de la página, y en base a dicha condción decidir que elementos mostrar.
 
-// 4) A partir de los inputs ingresados en el formulario, se deberan realizar las siguientes validaciones:
-// 1) Que el primer input sea un email valido.
-// 2) Que la contrasena tenga al menos 5 caracteres.
-// 3) Que los datos ingresados corresponden a una
-// persona que se encuentre registrada en la base de datos.
-// En caso de que alguna de las validaciones no sea exitosa,
-// se debera mostrar un mensaje de error que diga "Alguno de los datos ingresados son incorrectos"
+// 3) Para el caso de que la persona haga click en el botón "Cerrar Sesión", se deberá eliminar
+// la información del usuario, mostrar un mensaje indicando que se ha cerrado la sesión, y recargar
+// la página para mostrar nuevamente el formulario de login.
 
-// 5) En caso de que los datos ingresados sean correctos, se debera ocultar el formulario y mostrar un mensaje de
-// bienvenida al usuario.
+/* 
+TIPS:
+  - Para lograr los objetivos de este ejercicio, deberás valerte de algunos eventos y métodos que vimos en
+    las clases anteriores. Te invitamos a que revises los recursos en caso de que tengas dudas, ya que allí
+    encontrarás todas las respuestas que necesitas para completar la actividad.
 
-const loginBtn = document.querySelector(".login-btn");
-const errorContainer = document.querySelector("#error-container");
-const loader = document.querySelector("#loader");
+  - Recuerda que puedes seleccionar y manipular los elementos del archivo index.html, usando los
+    recursos que Javascript te ofrece para ello. Además, en el archivo styles.css tiene algunas clases y 
+    estilos predefinidos para ayudarte a completar la actividad.
 
-function validarUsuario() {
-  const email = document.querySelector("#email-input").value;
-  const password = document.querySelector("#password-input").value;
-  const errorMsj = `<small>Alguno de los datos ingresados son incorrectos</small>`;
-  const main = document.querySelector("main");
+  - Al momento de guardar información del usuario en el navegador, recuerda que debemos almacenar solo la 
+    información necesaria, y EN NINGUN CASO DEBEMOS GUARDAR LA CONTRASEÑA. Por ello, deberás seleccionar y
+    separar la información que tienes que almacenar, a partir del objeto que contiene la información del 
+    usuario.
 
-  const usuarioExistente = baseDeDatos.usuarios.find(
-    (usuario) => usuario.email === email
-  );
-
-  loader.classList.add("hidden");
-
-  if (!usuarioExistente) {
-    errorContainer.innerHTML = errorMsj;
-    errorContainer.classList.remove("hidden");
-    return;
-  }
-
-  if (usuarioExistente.password === password) {
-    main.innerHTML = "<h1> Bienvenido al sitio 😀 </h1>";
-  } else {
-    errorContainer.innerHTML = errorMsj;
-    errorContainer.classList.remove("hidden");
-    return;
-  }
-}
-loginBtn.addEventListener("click", () => {
-  loader.classList.remove("hidden");
-  errorContainer.classList.add("hidden");
-  setTimeout(() => {
-    validarUsuario();
-  }, 3000);
-});
+   ¡Manos a la obra!
+ */
